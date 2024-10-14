@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <audio autoplay loop>
+        <source src="Nand Ke Anand Bhayo Jai Kanhaiya Lal Ki  Krishna Bhajan  Bhakti Song  Nand Gher Anand Bhayo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Opening Ceremony</title>
+    
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(kkkkkk.png); /* Default background for PC */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating */
+            overflow: hidden; /* Prevent scrolling */
+        }
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                background-image: url(heyyy.png); /* Background for mobile */
+            }
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 90%; /* Responsive width */
+            margin: auto; /* Center the container */
+            position: relative; /* For better stacking context */
+            z-index: 1; /* Ensure the container is above the background */
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d46a9e; /* Border color */
+            border-radius: 5px;
+            width: 80%;
+        }
+        input[type="submit"] {
+            background-color: #d46a9e; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #b75d8b; /* Darker button color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Enter Password</h1>
+    <form id="passwordForm" onsubmit="return checkPassword()">
+        <input type="password" id="password" placeholder="Enter password" required>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message" style="color: red;"></p>
+</div>
+
+<script>
+    function checkPassword() {
+        const password = document.getElementById('password').value;
+        if (password === '2006') {
+            window.location.href = 'welcome.html'; // Redirect to the welcome page
+            return false; // Prevent form submission
+        } else {
+            document.getElementById('message').innerText = 'Incorrect password. Please try again.';
+            return false; // Prevent form submission
+        }
+    }
+</script>
+
+</body>
+</html>

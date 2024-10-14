@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page Button</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(eng1.png); /* Background image for PC */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                background-image: url(Helloeng1.png); /* Background for mobile */
+                background-size: contain; /* Ensure the background fits without cutting */
+                background-position: center; /* Center the mobile background */
+                background-repeat: no-repeat; /* Prevent repeating */
+            }
+            .button {
+                margin-top: 100px; /* Lower the button for mobile */
+            }
+        }
+        .button {
+            background-color: rgba(212, 106, 158, 0.8); /* Semi-transparent button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(183, 93, 139, 0.8); /* Darker button color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<button class="button" onclick="goToNextPage()">NEXT PAGE</button>
+
+<script>
+    function goToNextPage() {
+        window.location.href = 'nov.html'; // Redirect to nov.html for both PC and mobile
+    }
+</script>
+
+</body>
+</html>
